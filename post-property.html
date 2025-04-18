@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Ease - Post New Property</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Font Awesome CDN for the key icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>
+                <i class="fas fa-key header-icon"></i> Rent Ease
+            </h1>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="my-ads.html">My Ads</a>
+                <a href="post-property.html" class="active">Post New Property</a>
+            </nav>
+            <div class="user-profile">
+                <span id="user-name"></span>
+                <button id="profile">Profile</button>
+                <button id="logout">Logout</button>
+            </div>
+        </header>
+
+        <!-- Post Form -->
+        <section class="post-form">
+            <h2>Post a New Property</h2>
+            <form id="property-form">
+                <input type="text" id="title" placeholder="Property Title" required>
+                <select id="category" required>
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="house">House</option>
+                    <option value="flat">Flat</option>
+                    <option value="portion-floors">Portion/Floors</option>
+                    <option value="commercial">Commercial</option>
+                    <option value="land-plots">Land/Plots</option>
+                    <option value="rooms">Rooms</option>
+                    <option value="roommates">Roommates</option>
+                </select>
+                <input type="number" id="price" placeholder="Price" required>
+                <input type="text" id="location" placeholder="Location (e.g., Town,Near by,etc)" required>
+                <select id="city" required>
+                    <option value="" disabled selected>Select City</option>
+                    <option value="new-york">New York</option>
+                    <option value="los-angeles">Los Angeles</option>
+                    <option value="chicago">Chicago</option>
+                    <option value="houston">Houston</option>
+                    <option value="phoenix">Phoenix</option>
+                    <option value="san-diego">San Diego</option>
+                    <option value="miami">Miami</option>
+                    <option value="boston">Boston</option>
+                </select>
+                <textarea id="description" placeholder="Description" required></textarea>
+                <input type="file" id="image" accept="image/*" required>
+                <div id="image-preview"></div>
+                <button type="submit">Post Property</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Profile Modal -->
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>User Profile</h2>
+            <p><strong>Name:</strong> <span id="profile-name"></span></p>
+            <p><strong>Email:</strong> <span id="profile-email"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

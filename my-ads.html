@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Ads - Rent Ease</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><span class="header-icon">🔑</span>Rent Ease</h1>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="my-ads.html" class="active">My Ads</a>
+            <a href="post-property.html">Post Property</a>
+        </nav>
+        <div class="user-profile">
+            <span id="user-name"></span>
+            <button id="profile">Profile</button>
+            <button id="logout">Logout</button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="storage-info">
+            <span id="storage-usage">Storage Used: 0 KB</span>
+            <button id="clear-my-ads">Clear My Ads</button>
+        </div>
+        <section class="my-ads">
+            <h2>My Ads</h2>
+            <div id="my-ads-list"></div>
+        </section>
+    </div>
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>User Profile</h2>
+            <p><strong>Name:</strong> <span id="profile-name"></span></p>
+            <p><strong>Email:</strong> <span id="profile-email"></span></p>
+        </div>
+    </div>
+    <div id="property-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <div id="property-details"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

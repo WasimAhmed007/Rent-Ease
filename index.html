@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Ease</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><span class="header-icon">🔑</span>Rent Ease</h1>
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="my-ads.html">My Ads</a>
+            <a href="post-property.html">Post Property</a>
+        </nav>
+        <div class="user-profile">
+            <span id="user-name"></span>
+            <button id="profile">Profile</button>
+            <button id="logout">Logout</button>
+        </div>
+    </header>
+    <div class="container" id="main-content">
+        <div class="storage-info">
+            <span id="storage-usage">Storage Used: 0 KB</span>
+            <button id="clear-all-ads">Clear All Ads</button>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="selection-input" placeholder="Search properties...">
+        </div>
+        <div class="filters">
+            <select id="category-filter">
+                <option value="">All Categories</option>
+                <option value="apartment">Apartment</option>
+                <option value="house">House</option>
+                <option value="flat">Flat</option>
+                <option value="portion-floors">Portion/Floors</option>
+                <option value="commercial">Commercial</option>
+                <option value="land-plots">Land/Plots</option>
+                <option value="rooms">Rooms</option>
+                <option value="roommates">Roommates</option>
+            </select>
+            <select id="price-filter">
+                <option value="">All Prices</option>
+                <option value="0-100000">Up to 100,000</option>
+                <option value="100001-200000">100,001 - 200,000</option>
+                <option value="200001-300000">200,001 - 300,000</option>
+                <option value="300001-400000">300,001 - 400,000</option>
+                <option value="400001-500000">400,001 - 500,000</option>
+                <option value="500001+">500,001+</option>
+            </select>
+            <select id="city-filter">
+                <option value="">All Cities</option>
+                <option value="new-york">New York</option>
+                <option value="los-angeles">Los Angeles</option>
+                <option value="chicago">Chicago</option>
+                <option value="houston">Houston</option>
+                <option value="boston">Boston</option>
+            </select>
+        </div>
+        <section class="categories">
+            <h2>Explore Categories</h2>
+            <div class="category-grid"></div>
+        </section>
+        <section class="recent-ads">
+            <h2>Recent Ads</h2>
+            <div id="recent-ads-list"></div>
+        </section>
+    </div>
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>User Profile</h2>
+            <p><strong>Name:</strong> <span id="profile-name"></span></p>
+            <p><strong>Email:</strong> <span id="profile-email"></span></p>
+        </div>
+    </div>
+    <div id="property-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <div id="property-details"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
